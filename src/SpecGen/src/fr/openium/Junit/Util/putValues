@@ -1,0 +1,4 @@
+for (int i=0;i<columnName.length;i++){
+				mValues.put(columnName[i], "content");
+			}
+mValues.remove("timestamp");mValues.remove("_id");

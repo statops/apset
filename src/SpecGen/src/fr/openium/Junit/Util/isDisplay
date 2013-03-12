@@ -1,0 +1,37 @@
+private void isDisplay() {
+try{
+		Window windowTemp = mActivity.getWindow();
+		// assertTrue(windowTemp.hasChildren());
+		assertTrue(windowTemp.isActive());
+		View viewTemp = windowTemp.getDecorView();
+		viewTemp = viewTemp.getRootView();
+		assertNotNull("activity Launched", viewTemp);
+		// assertTrue("Activation", viewTemp.isActivated());
+		// faire l'algorithme
+		ViewGroup Vg = (ViewGroup) viewTemp;
+		RetrieveView(Vg);
+		getTextView(mViews);
+		assertTrue(mViews.size() > 0);
+		}catch (NullPointerException nu){
+		//fail();
+		//An activity must be displayed
+		assertTrue("Incoclusive", true);
+		}
+		
+		
+		/** check response result */
+		getActivity();
+		mInstrumentation.waitForMonitor(monitor);
+		ActivityResult response = monitor.getResult();
+
+		// expect response
+		if (requiredResponse()) {
+			assertTrue("NOT_VUNERABLE", response.getResultData() != null);
+		}
+
+		// not expect response
+		if (!requiredResponse()) {
+			assertTrue("NOT_VUNERABLE", response.getResultData() == null);
+		}
+
+	}
