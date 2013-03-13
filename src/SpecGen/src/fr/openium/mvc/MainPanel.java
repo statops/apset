@@ -51,6 +51,7 @@ public class MainPanel extends JPanel implements Observer {
 		this.ctrl = ctrl;
 		this.mWindow = window;
 		mdl.addObserver(this);
+		chooser = new JFileChooser(".");
 		add(childPnl(), BorderLayout.SOUTH);
 	}
 
@@ -284,6 +285,8 @@ public class MainPanel extends JPanel implements Observer {
 		return button;
 	}
 
+	private JFileChooser chooser;
+
 	@Override
 	public void update(Observable arg0, Object o) {
 		System.out.println("Update");
@@ -294,10 +297,7 @@ public class MainPanel extends JPanel implements Observer {
 		}
 
 		if (nom.equals(MainPanel.OPEN_SDK_FILE)) {
-			JFileChooser chooser = new JFileChooser();
-
 			chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-
 			chooser.showOpenDialog(null);
 			if (chooser.getSelectedFile() != null) {
 				System.out.println(chooser.getSelectedFile());
@@ -309,11 +309,12 @@ public class MainPanel extends JPanel implements Observer {
 
 		}
 		if (nom.equals(MainPanel.OPEN_STRING_FILE)) {
-			JFileChooser chooser = new JFileChooser();
-			chooser.setCurrentDirectory(new File(
-					"/Users/Stassia/Desktop/dossier/TEST/droid"));
 			chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 			chooser.showOpenDialog(null);
+			/*
+			 * chooser.setCurrentDirectory(new File(
+			 * "/Users/Stassia/Desktop/dossier/TEST/droid"));
+			 */
 			if (chooser.getSelectedFile() != null) {
 				System.out.println(chooser.getSelectedFile());
 				projectlbl.setText("Selected file : "
@@ -323,11 +324,12 @@ public class MainPanel extends JPanel implements Observer {
 			}
 		}
 		if (nom.equals(OPEN_TEST_PROJECT_FILE)) {
-			JFileChooser chooser = new JFileChooser();
-			chooser.setCurrentDirectory(new File(
-					"/Users/Stassia/Desktop/dossier/TEST/droid"));
 			chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 			chooser.showOpenDialog(null);
+			/*
+			 * chooser.setCurrentDirectory(new File(
+			 * "/Users/Stassia/Desktop/dossier/TEST/droid"));
+			 */
 			if (chooser.getSelectedFile() != null) {
 				System.out.println(chooser.getSelectedFile());
 				testprojectlbl.setText("Selected file : "
@@ -339,12 +341,12 @@ public class MainPanel extends JPanel implements Observer {
 		}
 
 		if (nom.equals(OPEN_TESTER_PROJECT_FILE)) {
-			JFileChooser chooser = new JFileChooser();
-			chooser.setCurrentDirectory(new File(
-					"/Users/Stassia/Documents/workspace/"));
-
 			chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 			chooser.showOpenDialog(null);
+			/*
+			 * chooser.setCurrentDirectory(new File(
+			 * "/Users/Stassia/Documents/workspace/"));
+			 */
 			if (chooser.getSelectedFile() != null) {
 				System.out.println(chooser.getSelectedFile());
 				testprojectlbl.setText("Selected file : "
@@ -384,16 +386,19 @@ public class MainPanel extends JPanel implements Observer {
 			}
 		}
 		if (nom.equals(INSTALL)) {
-			if (!Model.mInstallStatus) {
+			if (!mdl.isInstalled()) {
 				mVul.setForeground(Color.RED);
+				mBouttons.get(5).setEnabled(false);
+				mBouttons.get(6).setEnabled(false);
 			} else {
 				mVul.setBackground(Color.BLACK);
+				mBouttons.get(5).setEnabled(false);
+				mBouttons.get(6).setEnabled(true);
 			}
 			mVul.setText(mdl.getMessage());
 			mdl.setMessage("");
 			mNVul.setVisible(false);
-			mBouttons.get(5).setEnabled(false);
-			mBouttons.get(6).setEnabled(true);
+
 		}
 		if (nom.equals(LAUNCH)) {
 			mVul.setBackground(Color.BLACK);

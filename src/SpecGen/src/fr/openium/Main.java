@@ -36,7 +36,7 @@ public class Main {
 		 * classLoader.loadClass("reflection.MyObject");
 		 */
 
-		if (args.length == 12) {
+		if (args.length == 14) {
 			for (int i = 0; i < args.length - 1;) {
 				if (args[i].equals("-f")) {
 					mProjectPath = args[i + 1];
@@ -70,10 +70,14 @@ public class Main {
 			System.out.println("Project Path : " + mProjectPath);
 			System.out.println("Vulnerability type :" + mVulnerabilityType);
 			generateJunitTestCase();
-			md.installAll();
-			md.launchTesting();
-			System.out.println("Waiting for Result");
-			md.showResult();
+			if (md.installAll()) {
+				if (md.launchTesting()) {
+					System.out.println("Waiting for Result");
+					md.showResult();
+				}
+			} else {
+				System.out.println("Installation failed");
+			}
 
 		} else {
 

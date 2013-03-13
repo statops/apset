@@ -645,6 +645,7 @@ public class TcGenerationTool extends AbstractTcGenerationTool {
 		/**
 		 * case Exception, try and catch the exception
 		 */
+		boolean isDisplay = false;
 		// String type = concreteTC.getType();
 		StringBuilder inTry = new StringBuilder();
 		if (concreteTC.getType().equals(ACTIVITY_TYPE)) {
@@ -653,6 +654,7 @@ public class TcGenerationTool extends AbstractTcGenerationTool {
 			inTry.append(M_ACTIVITY + EQUAL + GETACTIVITY + SEMICOLON + "\n");
 			inTry.append(ASSERTNOTNULL + LBRACKETS + M_ACTIVITY + RBRACKETS
 					+ SEMICOLON + "\n");
+			isDisplay = true;
 		} else if (concreteTC.getType().equals(SERVICE_TYPE)) {
 			/** Start Service Under test */
 			inTry.append(STARTSERVICE + SEMICOLON + "\n");
@@ -665,7 +667,7 @@ public class TcGenerationTool extends AbstractTcGenerationTool {
 		Pass passVerdict = concreteTC.getTestCaseIntent().getPass();
 		/** for EachVerdictSet assert Pass */
 		ArrayList<Object> passOutput = passVerdict.getVerdictSet();
-		boolean isDisplay = true;
+
 		StringBuilder inCatch = new StringBuilder();
 		for (int i = 0; i < passOutput.size(); i++) {
 			String out;
@@ -679,9 +681,8 @@ public class TcGenerationTool extends AbstractTcGenerationTool {
 
 			} else if ((passOutput.get(i) instanceof String)
 					&& Actions.Exceptions.contains((String) passOutput.get(i))) {
-				String verdict = ASSERTTRUE + LBRACKETS + QUOTE
-						+ passVerdict.getVerdictName() + QUOTE + COMA + TRUE
-						+ RBRACKETS + SEMICOLON + "\n";
+				String verdict = ASSERTTRUE + LBRACKETS + TRUE + RBRACKETS
+						+ SEMICOLON + "\n";
 				setCatch((String) passOutput.get(i), inCatch, verdict);
 			}
 		}

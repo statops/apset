@@ -349,17 +349,17 @@ public class Model extends Observable {
 	}
 
 	private String mTestingToolPath;
-	public static boolean mInstallStatus;
+	private static boolean mInstallStatus;
 	private String mMessage;
 
 	public boolean installAll() {
 		AntManager ant = new AntManager();
 		ArrayList<Boolean> done = new ArrayList<Boolean>();
 		ant.setStdErr(null);
-
+		mMessage = "";
 		// Check if Emulator is connected
 		if (!checkEmulator()) {
-			mInstallStatus = false;
+			setInstallStatus(false);
 			setMessage("Emulator is not Connected");
 			setChanged();
 			notifyObservers(MainPanel.INSTALL);
@@ -372,7 +372,7 @@ public class Model extends Observable {
 		ant.installd(mProjectPath + "/build.xml", mSdkPath);
 
 		if (ant.getStdErr() != null) {
-			mInstallStatus = false;
+			setInstallStatus(false);
 			setMessage("Project build/installation failed");
 			setChanged();
 			notifyObservers(MainPanel.INSTALL);
@@ -385,7 +385,7 @@ public class Model extends Observable {
 		ant.debug(mTestProjectPath + "/build.xml", mSdkPath);
 		ant.installd(mTestProjectPath + "/build.xml", mSdkPath);
 		if (ant.getStdErr() != null) {
-			mInstallStatus = false;
+			setInstallStatus(false);
 			setMessage("Test Project build/installation failed");
 			setChanged();
 			notifyObservers(MainPanel.INSTALL);
@@ -400,7 +400,7 @@ public class Model extends Observable {
 		ant.installd(mTestingToolPath + "/build.xml", mSdkPath);
 		if (ant.getStdErr() != null) {
 			setMessage("Testing tool build/installation failed");
-			mInstallStatus = false;
+			setInstallStatus(false);
 			setChanged();
 			notifyObservers(MainPanel.INSTALL);
 			return false;
@@ -408,10 +408,10 @@ public class Model extends Observable {
 
 		if (done.contains(false)) {
 			// launchTesting();
-			mInstallStatus = false;
+			setInstallStatus(false);
 		} else {
 			// launchTesting();
-			mInstallStatus = true;
+			setInstallStatus(true);
 		}
 
 		setMessage("All Android Project build/installation Succed");
@@ -422,6 +422,7 @@ public class Model extends Observable {
 	}
 
 	private boolean checkEmulator() {
+		checkAdb();
 		RunManager run = new RunManager();
 		run.shell(mAdbCommand);
 		if (run.getError())
@@ -430,47 +431,14 @@ public class Model extends Observable {
 			return true;
 	}
 
-	private boolean launchTest(String apkProject, String apkTestProject,
-			String TestingToolProject) {
-		ArrayList<Boolean> done = new ArrayList<Boolean>();
-		RunManager run = new RunManager();
-		// install the appli
-
-		boolean value = run.install(mAdbCommand, apkProject);
-		System.out.println("madbCommand:  " + mAdbCommand);
-		System.out.println("apkProject:  " + apkProject);
-
-		System.out.println("install the appli:  " + value);
-		done.add(value);
-		// install the application test
-		value = run.install(mAdbCommand, apkTestProject);
-		System.out.println("apkTestProject):  " + apkTestProject);
-		System.out.println("install the appli:  " + value);
-		done.add(value);
-		// install testing tool
-		value = run.install(mAdbCommand, TestingToolProject);
-
-		System.out.println("TestingToolProject):  " + TestingToolProject);
-		done.add(value);
-		System.out.println("install the appli:  " + value);
-		// pull Result
-		// /Users/Stassia/Documents/workspace/SpecGen/XMLResult
-		if (done.contains(false)) {
-			return false;
-		} else {
-			// a faire tache asynchrone
-			launchTesting();
-		}
-		return true;
-	}
-
-	public void launchTesting() {
+	public boolean launchTesting() {
 		checkAdb();
 		String value = new AntManager()
 				.exec(mAdbCommand
 						+ " shell am start -a intent.action.test -n com.example.testingtool/.DetailActivity");
 		setChanged();
 		notifyObservers(MainPanel.LAUNCH);
+		return true;
 	}
 
 	public void tesLaunch(String apkProject) {
@@ -755,6 +723,14 @@ public class Model extends Observable {
 
 	public void setMessage(String mMessage) {
 		this.mMessage = mMessage;
+	}
+
+	public boolean isInstalled() {
+		return mInstallStatus;
+	}
+
+	public void setInstallStatus(boolean mInstallStatus) {
+		this.mInstallStatus = mInstallStatus;
 	}
 
 }

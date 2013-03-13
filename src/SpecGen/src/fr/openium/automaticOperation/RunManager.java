@@ -159,17 +159,10 @@ public class RunManager {
 		try {
 			ProcessBuilder proc = new ProcessBuilder(adb, option);
 			Process p = proc.start();
-			BufferedReader br2 = new BufferedReader(new InputStreamReader(
-					p.getInputStream()));
-			while ((line = br2.readLine()) != null) {
-				Bline.append(line);
-				System.out.println(line);
-			}
 		} catch (Exception e) {
-			System.err.println("Error");
+			System.err.println("Error:  " + e.getMessage());
 			mError = true;
 		}
 
 	}
-
 }

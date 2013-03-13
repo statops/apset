@@ -40,7 +40,7 @@ public class Controller implements ActionListener, FocusListener {
 				System.out.println("Open tester project File");
 				mdl.openfile(MainPanel.OPEN_TESTER_PROJECT_FILE);
 			}
-
+			
 			if (b.getName().equals(MainPanel.GENERATE)) {
 				Run generate = new Run(MainPanel.GENERATE);
 				generate.start();
@@ -48,9 +48,10 @@ public class Controller implements ActionListener, FocusListener {
 			if (b.getName().equals(MainPanel.SHOWRESULT)) {
 				mdl.showResult();
 			}
-			if (b.getName().equals(MainPanel.INSTALL)) {
+			if (b.getName()
+					.equals(MainPanel.INSTALL)) {
 				Run install = new Run(MainPanel.INSTALL);
-				install.start();
+				 install.start();
 			}
 			if (b.getName().equals(MainPanel.RESET)) {
 				mdl.reset();
@@ -84,7 +85,6 @@ public class Controller implements ActionListener, FocusListener {
 
 	class Run extends Thread {
 		private String mName;
-		private boolean mInstall;
 
 		public Run(String name) {
 			mName = name;
@@ -94,20 +94,14 @@ public class Controller implements ActionListener, FocusListener {
 			if (mName.equals(MainPanel.GENERATE)) {
 				try {
 					mdl.generate();
-
-				} catch (FileNotFoundException e) {
-
-					e.printStackTrace();
+				} catch (FileNotFoundException e1) {
+					e1.printStackTrace();
 				}
 			}
 			if (mName.equals(MainPanel.INSTALL)) {
-
 				if (mdl.getGenerateStatus()) {
 					mdl.installAll();
-					mInstall = true;
-
 				}
-
 			}
 
 		}
