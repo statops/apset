@@ -16,7 +16,7 @@ android application security testing tool requires:
 How to launch testing
 =====================
 
-Run Main with the following parameters: 
+Run "Main" with the following parameters: 
 
 -f android project path
 
@@ -31,6 +31,10 @@ Run Main with the following parameters:
 -t android test project path
 
 -tester the Testing tool project path
+
+Other way: 
+
+Launch "Window" to interact with a UI. 
 
 
 
