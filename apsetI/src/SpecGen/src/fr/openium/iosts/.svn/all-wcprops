@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/rd-aaut/!svn/ver/50/trunk/src/SpecGen/src/fr/openium/iosts
+END
+IostsAbstractTestCase.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/rd-aaut/!svn/ver/70/trunk/src/SpecGen/src/fr/openium/iosts/IostsAbstractTestCase.java
+END
+IostsVulnerabilities.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/rd-aaut/!svn/ver/79/trunk/src/SpecGen/src/fr/openium/iosts/IostsVulnerabilities.java
+END
+Iosts.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rd-aaut/!svn/ver/121/trunk/src/SpecGen/src/fr/openium/iosts/Iosts.java
+END
+IostsParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/rd-aaut/!svn/ver/70/trunk/src/SpecGen/src/fr/openium/iosts/IostsParser.java
+END
+IostsSpecification.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/rd-aaut/!svn/ver/61/trunk/src/SpecGen/src/fr/openium/iosts/IostsSpecification.java
+END
+IostsConcreteTestCase.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/rd-aaut/!svn/ver/139/trunk/src/SpecGen/src/fr/openium/iosts/IostsConcreteTestCase.java
+END
+IostsLocation.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/rd-aaut/!svn/ver/50/trunk/src/SpecGen/src/fr/openium/iosts/IostsLocation.java
+END
+IostsTransition.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/rd-aaut/!svn/ver/57/trunk/src/SpecGen/src/fr/openium/iosts/IostsTransition.java
+END

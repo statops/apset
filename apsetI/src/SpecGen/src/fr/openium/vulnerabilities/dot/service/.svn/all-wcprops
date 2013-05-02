@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/rd-aaut/!svn/ver/50/trunk/src/SpecGen/src/fr/openium/vulnerabilities/dot/service
+END
+availability.dot
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/rd-aaut/!svn/ver/58/trunk/src/SpecGen/src/fr/openium/vulnerabilities/dot/service/availability.dot
+END
+integrity.dot
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/rd-aaut/!svn/ver/87/trunk/src/SpecGen/src/fr/openium/vulnerabilities/dot/service/integrity.dot
+END
+authenticity.dot
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/rd-aaut/!svn/ver/50/trunk/src/SpecGen/src/fr/openium/vulnerabilities/dot/service/authenticity.dot
+END

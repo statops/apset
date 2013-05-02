@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rd-aaut/!svn/ver/51/trunk/src/SpecGen/src/fr/openium/specification/xml
+END
+StreamException.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/rd-aaut/!svn/ver/51/trunk/src/SpecGen/src/fr/openium/specification/xml/StreamException.java
+END
+AndroidManifest.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/rd-aaut/!svn/ver/51/trunk/src/SpecGen/src/fr/openium/specification/xml/AndroidManifest.java
+END
+AndroidManifestParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/rd-aaut/!svn/ver/78/trunk/src/SpecGen/src/fr/openium/specification/xml/AndroidManifestParser.java
+END
+AndroidXPathFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/rd-aaut/!svn/ver/51/trunk/src/SpecGen/src/fr/openium/specification/xml/AndroidXPathFactory.java
+END
+ManifestData.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/rd-aaut/!svn/ver/76/trunk/src/SpecGen/src/fr/openium/specification/xml/ManifestData.java
+END
+IAbstractResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/rd-aaut/!svn/ver/51/trunk/src/SpecGen/src/fr/openium/specification/xml/IAbstractResource.java
+END
+IAbstractFolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/rd-aaut/!svn/ver/50/trunk/src/SpecGen/src/fr/openium/specification/xml/IAbstractFolder.java
+END
+IAbstractFile.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/rd-aaut/!svn/ver/50/trunk/src/SpecGen/src/fr/openium/specification/xml/IAbstractFile.java
+END

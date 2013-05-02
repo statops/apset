@@ -1,0 +1,16 @@
+// for each Database Structure
+		mUri = Uri.parse("content://" + Auth + "/" + uri);
+		ArrayList<String> selectedCol = new ArrayList<String>();
+		col = new StringTokenizer(column, ";");
+		do {
+			selectedCol.add(col.nextToken());
+		} while (col.hasMoreElements());
+		try {
+			setContentValues(selectedCol);
+			mContentResolver.insert(mUri, mContentValues);
+		} catch (IllegalArgumentException e2) {
+			e2.printStackTrace();
+			assertTrue(true);
+		} catch (Exception type) {
+			assertTrue(true);
+		}

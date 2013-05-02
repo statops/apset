@@ -1,0 +1,12 @@
+public void RetrieveView(ViewGroup Vg) {
+
+		for (int i = 0; i < Vg.getChildCount(); i++) {
+			try {
+				ViewGroup child = (ViewGroup) Vg.getChildAt(i);
+				RetrieveView(child);
+			} catch (ClassCastException cs) {
+				mViews.add(Vg.getChildAt(i));
+			}
+		}
+
+	}

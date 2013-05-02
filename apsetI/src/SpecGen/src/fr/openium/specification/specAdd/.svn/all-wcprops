@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/rd-aaut/!svn/ver/51/trunk/src/SpecGen/src/fr/openium/specification/specAdd
+END
+SpecAddData.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/rd-aaut/!svn/ver/51/trunk/src/SpecGen/src/fr/openium/specification/specAdd/SpecAddData.java
+END
+SpecAddComponent.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/rd-aaut/!svn/ver/51/trunk/src/SpecGen/src/fr/openium/specification/specAdd/SpecAddComponent.java
+END
+SpecAdd.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/rd-aaut/!svn/ver/51/trunk/src/SpecGen/src/fr/openium/specification/specAdd/SpecAdd.java
+END
+SpecAddParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/rd-aaut/!svn/ver/51/trunk/src/SpecGen/src/fr/openium/specification/specAdd/SpecAddParser.java
+END
+SpecAddHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/rd-aaut/!svn/ver/100/trunk/src/SpecGen/src/fr/openium/specification/specAdd/SpecAddHandler.java
+END

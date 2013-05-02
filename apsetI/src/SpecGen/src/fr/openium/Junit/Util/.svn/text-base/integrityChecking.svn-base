@@ -1,0 +1,29 @@
+cursor=mContentResolver.query(mUri, null, null, null, null);
+if (cursor!=null&&cursor.moveToLast()){		
+				columnName = cursor.getColumnNames();
+			do{
+				for (String colomn : columnName) {
+					String value=cursor.getString(cursor.getColumnIndex(colomn));		
+					Log.i("cvalue/coloumn",colomn+" "+value);
+					if (colomn.equalsIgnoreCase("timestamp")||colomn.equalsIgnoreCase("_id")){
+						assertTrue("pass", true);
+					}
+					else {
+						if (mValues.get(colomn) instanceof Long){
+						assertEquals(mValues.get(colomn), Long.parseLong(value));
+						}
+						else { 
+							if (mValues.get(colomn) instanceof Integer){
+								assertEquals(mValues.get(colomn), Integer.parseInt(value));
+								}else
+							assertEquals(mValues.get(colomn), value);
+						}
+					}
+				}	
+			}while(cursor.moveToNext());
+			cursor.close();
+			}else
+			{
+				//data is deleted
+				fail("VULNERABLE");
+		

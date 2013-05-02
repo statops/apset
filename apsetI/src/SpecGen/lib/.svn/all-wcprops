@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/rd-aaut/!svn/ver/28/trunk/src/SpecGen/lib
+END
+robotium-solo-3.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/rd-aaut/!svn/ver/141/trunk/src/SpecGen/lib/robotium-solo-3.6.jar
+END
+codemodel-2.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rd-aaut/!svn/ver/141/trunk/src/SpecGen/lib/codemodel-2.2.jar
+END
+codemodel-annotation-compiler-2.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/rd-aaut/!svn/ver/141/trunk/src/SpecGen/lib/codemodel-annotation-compiler-2.2.jar
+END
+commons-io-2.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/rd-aaut/!svn/ver/88/trunk/src/SpecGen/lib/commons-io-2.4.jar
+END
+introspec.jar
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/rd-aaut/!svn/ver/141/trunk/src/SpecGen/lib/introspec.jar
+END
+AllPairs.jar
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/rd-aaut/!svn/ver/73/trunk/src/SpecGen/lib/AllPairs.jar
+END
+com.springsource.org.apache.tools.ant-1.8.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/rd-aaut/!svn/ver/88/trunk/src/SpecGen/lib/com.springsource.org.apache.tools.ant-1.8.1.jar
+END
+codemodel-2.2-javadoc.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/rd-aaut/!svn/ver/141/trunk/src/SpecGen/lib/codemodel-2.2-javadoc.jar
+END
+graphiz.jar
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rd-aaut/!svn/ver/28/trunk/src/SpecGen/lib/graphiz.jar
+END
+android.jar
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/rd-aaut/!svn/ver/62/trunk/src/SpecGen/lib/android.jar
+END

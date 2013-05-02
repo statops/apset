@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<provider>
+
+    <authorities name="com.centrefrance.soprodif.portage.provider" >
+
+        <table name="client" >
+
+            <uri>
+client
+            </uri>
+
+            <text>
+id_tournee;date_tournee;etat_motif;adresse
+            </text>
+        </table>
+
+        <table name="tournee" >
+
+            <uri>
+tournee
+            </uri>
+
+            <text>
+id;date
+            </text>
+        </table>
+
+        <table name="livraison" >
+
+            <uri>
+livraison
+            </uri>
+
+            <text>
+id_tournee;date
+            </text>
+        </table>
+
+        <table name="journaltournee" >
+
+            <uri>
+journaltournee
+            </uri>
+
+            <text>
+titre;edition
+            </text>
+        </table>
+    </authorities>
+
+</provider>

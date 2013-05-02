@@ -1,0 +1,14 @@
+public void getTextView(ArrayList<View> listView) {
+		ArrayList<View> listViewTemp = new ArrayList<View>();
+
+		if (!(listView.size() > 0))
+			return;
+		for (int i = 0; i < listView.size(); i++) {
+			if ((listView.get(i) instanceof TextView)) {
+				listViewTemp.add(listView.get(i));
+			}
+		}
+
+		listView.clear();
+		listView.addAll(listViewTemp);
+	}

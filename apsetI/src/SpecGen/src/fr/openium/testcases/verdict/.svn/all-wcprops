@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/rd-aaut/!svn/ver/57/trunk/src/SpecGen/src/fr/openium/testcases/verdict
+END
+Fail.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/rd-aaut/!svn/ver/87/trunk/src/SpecGen/src/fr/openium/testcases/verdict/Fail.java
+END
+Verdict.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/rd-aaut/!svn/ver/97/trunk/src/SpecGen/src/fr/openium/testcases/verdict/Verdict.java
+END
+Inconclusive.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/rd-aaut/!svn/ver/87/trunk/src/SpecGen/src/fr/openium/testcases/verdict/Inconclusive.java
+END
+Pass.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/rd-aaut/!svn/ver/87/trunk/src/SpecGen/src/fr/openium/testcases/verdict/Pass.java
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/rd-aaut/!svn/ver/51/trunk/src/SpecGen/src/fr/openium/specification
+END
+IAbstractSpecification.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/rd-aaut/!svn/ver/50/trunk/src/SpecGen/src/fr/openium/specification/IAbstractSpecification.java
+END
+IAbstractIntent.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/rd-aaut/!svn/ver/57/trunk/src/SpecGen/src/fr/openium/specification/IAbstractIntent.java
+END
+IAbstractComponent.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/rd-aaut/!svn/ver/50/trunk/src/SpecGen/src/fr/openium/specification/IAbstractComponent.java
+END
