@@ -1,4 +1,0 @@
-for (int i = 0; i < text.size(); i++) 
-{
-mContentValues.put(text.get(i), random(mValueToCheck));
-}

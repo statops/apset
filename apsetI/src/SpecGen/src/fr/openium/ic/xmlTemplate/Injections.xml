@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Random Values that will be used to insert initially into a content provi -->
-<injections>
-    <Text>?;!;%;www.openium.fr</Text>
-    <Int>0;1;10000000000000;2000</Int>
-    <Long>     
-    </Long>
-</injections>

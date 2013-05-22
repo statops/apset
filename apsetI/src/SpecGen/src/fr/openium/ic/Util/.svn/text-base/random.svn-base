@@ -1,3 +1,0 @@
-rd = new Random();
-int randomInt = rd.nextInt(list.size());
-value = list.get(randomInt);

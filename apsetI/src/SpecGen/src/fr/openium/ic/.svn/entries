@@ -1,47 +1,0 @@
-9
-
-dir
-127
-https://svn.openium.fr/rd-aaut/trunk/src/SpecGen/src/fr/openium/ic
-https://svn.openium.fr/rd-aaut
-
-
-
-2013-03-22T16:58:43.915723Z
-127
-stassia
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-9bd7529a-1d08-475a-8672-07a861b90400
-
-
-
-
-
-
-0
-
-Db
-dir
-
-Junit
-dir
-
-Util
-dir
-
-xmlTemplate
-dir
-
