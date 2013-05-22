@@ -1,4 +1,0 @@
-private boolean requiredResponse() {
-
-		return true;
-	}

@@ -1,9 +1,0 @@
-<resources>
-
-    <string name="app_name">TestingTool</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="menu_settings">Settings</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="_sdcard_testresult_unittest_txt">/sdcard/TESTRESULT/unitTest.txt</string>
-
-</resources>
